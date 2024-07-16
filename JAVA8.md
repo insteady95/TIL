@@ -179,8 +179,6 @@ CPU는 PC(Program Counter) Register가 가리키고 있는 명령어를 읽어�
 
 Memory의 경우에는 여러 process들이 각자의 memory영역을 차지하여 동시에 적재 됩니다. 반면 하나의 CPU는 매 순간 하나의 process만 연산할 수 있습니다. 하지만 CPU의 처리 속도가 워낙 빨라서 수 ms 이내의 짧은 시간 동아 녀얼 process들이 CPU에서 번갈아 실행되기 때문에 
 
-![img_6](https://user-images.githubusercontent.com/79847020/161904722-9a70dc87-e502-4af7-9d22-0a960a7c6cca.png)
-
 ### Context
 
 시분할 시스템에서는 한 process가 매우 짧은 시간동안 CPU를 점유하여 일정부분의 명령을 수행하고, 다른 process에게 넘깁니다. 그 후 차례가 되면 다시 CPU를 점유하여 명령을 수행합니다. 따라서 `이전에 어디까지 명령을 수행했고, register에는 어떤 값이 저장되어 있었는지에 대한 정보`가 필요하게 됩니다. `process가 현재 어떤 상태로 수행되고 있는지에 대한 총체적인 정보가 바로 context입니다.` context 정보들은 PCB(Process Control Block)에 저장을 합니다.
