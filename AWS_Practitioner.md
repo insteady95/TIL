@@ -27,7 +27,7 @@ AWS 계정생성 → insteady95@gmail.com →
 
 ---
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled.png)
+![Untitled](AWS_Practitioner/Untitled.png)
 
 안녕하십니까, AWS Certified Cloud Practitioner 강좌에 오신 것을 환영합니다. 저는 강사인  Stéphane Marek입니다. 강의는 5분 후에 시작할 것인데, 부디 집중하여 주시기를 바랍니다. 우리는 Cloud Practitioner 시험에 대비할 것입니다. 이 시험의 일련번호는 CLF-C02입니다. 이 자격은 취득하기 어려우므로, 강좌가 길지만 흥미로울 것입니다. 기초적인 IT 지식을 가지고 계시면 도움이 됩니다. 하지만 IT 계열에 속하지 않으시더라도 걱정하실 필요 없습니다. 모든 내용은 설명을 드릴 것입니다. 이 강좌에서는 많은 내용을 배울 것입니다. AWS에 존재하는 200가지 이상의 서비스 중에 40개 이상을 다룰 예정입니다. IT와 AWS가 처음이시라면, 걱정하지 마십시오. 저는 여러분을 환영하며, 여러분은 아주 많은 것을 배우시게 될 것입니다.
 
@@ -57,11 +57,11 @@ Free Tier(프리 티어)에 대한 자세한 내용은 이 URL에 있습니다.
 
 강의의 첫 섹션에 오신 것을 환영합니다. 클라우드와 클라우드 컴퓨팅을 소개하도록 하겠습니다. 그래서 실습은 진행하지 않고 이론만 살펴보지만 클라우드가 유용한 이유와 원리에 관해 이해하시길 바랍니다. 기초로 돌아가 보죠 웹사이트의 원리는 무엇인가요? 호스팅된 서버가 있고 웹 브라우저에서 서버로 액세스해서 웹사이트를 시각화하는 것입니다. 그래서 클라이언트에서는 네트워크를 사용합니다. 네트워크는 클라이언트와 서버 사이에 있고 클라이언트가 네트워크를 찾아 패킷을 라우팅하기 위해 네트워크를 사용해서 데이터를 서버에 보내면 서버가 클라이언트에 응답하고 응답을 얻으면 웹사이트를 볼 수 있는 것입니다. 간단하게 설명했지만 개념은 이해가 될 거예요.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%201.png)
+![Untitled](AWS_Practitioner/Untitled%201.png)
 
 클라이언트가 서버를 찾고 서버가 클라이언트를 찾으려면 IP 주소가 있어야 합니다. 그래서 클라이언트에 IP 주소가 있고 서버에도 IP 주소가 있죠. 따라서 여러분이 IP 주소를 사용해 원하는 서버로 요청을 보낼 수 있고 서버는 여러분을 찾는 방법을 알게 됩니다. 마치 여러분이 친구에게 편지를 쓰는 것과 같죠. 여러분이 편지를 쓴다면 그것이 데이터가 되고 여러분은 클라이언트가 됩니다. 그리고 편지를 보낼 때 우편함에 편지를 넣으면 네트워크는 우체국의 네트워크가 됩니다. 그러면 우체국은 네트워크와 편지에 적은 주소를 이용해 이 경우에는 서버인 편지의 목적지로 라우팅하고 받는 사람이 답장을 할 경우 봉투 뒷면에 적은 주소를 사용해서 답장을 하고 동일한 네트워크를 통해 여러분에게 편지가 도착합니다. 그래서 서버는 편지의 네트워크 같은 것이죠. 비유가 괜찮았길 바랍니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%202.png)
+![Untitled](AWS_Practitioner/Untitled%202.png)
 
 서버에는 무엇이 있을까요? 서버에는 CPU가 있고 CPU는 몇 가지 계산을 실행하는 작은 조각으로 계산을 하고 결과를 찾는데 매우 유용합니다. 또한 서버는 RAM 또는 메모리가 필요합니다. 아주 빠른 메모리가 필요하고 정보를 저장하고 빨리 검색할 수 있도록 합니다. 그러면 CPU와 메모리로 무엇을 얻을 수 있을까요? 두뇌를 얻을 수 있습니다 여러분의 두뇌를 생각해 보세요. 생각을 하는 것은 실제로 계산을 하는 것입니다 정말 복잡하지만 계산을 하는 것이죠. 그뿐 아니라 몇몇의 정보는 유지해야 하는데요. 다시 말하면 우리는 기억을 가지고 있고 이 기억은 두뇌에 있는 것이죠. 그래서 CPU와 RAM을 함께 생각해 보면 두뇌와 비슷합니다. 또한 장기 저장하는 데이터도 필요합니다. 인간 두뇌에도 있지만 컴퓨터에서는 파일과 같은 데이터를 저장하는 특별한 저장소가 있습니다. 그래서 더 구조적인 방법으로 데이터를 저장하려면 데이터베이스를 사용하고 데이터베이스는 데이터를 쉽게 검색하고 쿼리가 가능한 형식의 데이터가 될 것입니다.
 
@@ -73,7 +73,7 @@ Free Tier(프리 티어)에 대한 자세한 내용은 이 URL에 있습니다.
 
 그래서 강의를 시작하기 전에 IT 용어를 약간 정의하자면 네트워크는 서로 연결될 케이블과 라우터 그리고 서버의 묶음이며 라우터는 컴퓨터 네트워크 간의 데이터 패킷을 전달하는 특정 기기로 우편배달 서비스와 마찬가지로 인터넷에서 패킷을 어디로 보낼지 파악합니다. 이제 패킷이 목적지에 도착하면 스위치가 있습니다 스위치는 패킷을 네트워크의 정확한 클라이언트에 보냅니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%203.png)
+![Untitled](AWS_Practitioner/Untitled%203.png)
 
 이제 모든 것을 합쳐 보면 이런 모습입니다 클라이언트가 데이터를 라우터에 보내면 라우터는 스위치에 도달하는 방법을 찾고 네트워크에 있는 어떤 컴퓨터로 데이터를 보낼지 파악합니다. 이런 것을 왜 알려드릴까요? 기존의 IT로 돌아가 보겠습니다.
 
@@ -181,7 +181,7 @@ Opex는 "운영 비용"을 의미하며, 기업이 일상적인 비용으로서 
 
 더 나아가 서비스형 소프트웨어인 SaaS가 있습니다. 서비스 제공 업체가 완전히 운영하고 관리하는 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%204.png)
+![Untitled](AWS_Practitioner/Untitled%204.png)
 
 예시로 이 3가지 유형을 비교해 보겠습니다. 온프레미스에서 전체를 관리합니다. 애플리케이션, 데이터, 런타임, 미들웨어뿐만 아니라 운영체제, 가상화, 서버, 스토리지 그리고 네트워킹 등 많은 것을 관리하죠.
 
@@ -232,13 +232,13 @@ AWS는 IAM, Route 53, CloudFront, 그리고 WAF 등의 글로벌 서비스를 �
 
 AWS Console Home에서 강의를 시작해봅시다. 이 페이지에서 할 수 있는 게 아주 많아요. 우선 화면 오른쪽 상단을 보면 리전 선택기가 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%205.png)
+![Untitled](AWS_Practitioner/Untitled%205.png)
 
 현재 US East (N. Virginia) us-east-1로 설정되어 있죠. 여러분에게 지리적으로 가장 가까운 리전을 선택하시는 게 좋아요. 저는 Ireland 근처에 있어서 eu-west-1을 선택하겠습니다. 그 외에 다른 리전 예를 들어 Africa의 Cape Town 근처에 계실 수도 있죠. 물론 실제로 해당 리전에 있어야만 리전을 선택할 수 있는 건 아닙니다. 가장 가깝다고 판단되는 리전을 선택하세요. 지연 시간이 줄어들 겁니다.
 
 또 Console Home에는 최근 방문한 서비스 리스트가 있는데 여러분은 없는 게 당연합니다. 저는 한 번 들어가 본 서비스가 리스트에 나와 있네요. 그 아래에서는 AWS에 관한 정보가 있어요. 상태에 문제가 생긴다면 그 옆에 나타나고 계정 비용 및 이용 정보뿐만 아니라 해결책을 찾는 튜토리얼 등도 있습니다. 사실 시간에 따라 웹페이지가 많이 바뀔 거예요. 지난 2년만 보더라도 판이하게 바뀌었으니 여러분이 보시는 시점에는 또 다를 수도 있습니다. 차이가 너무 크게 난다면 그때 영상을 다시 찍도록 하겠습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%206.png)
+![Untitled](AWS_Practitioner/Untitled%206.png)
 
 이제 AWS 서비스를 살펴볼게요. 두 가지 옵션이 있는데 그중 하나는 왼쪽 상단에서 Services를 클릭하면 알파벳 순서로 서비스를 볼 수 있습니다. 보시다시피 AWS에는 서비스가 아주 많죠. 혹은 COMPUTE 등 카테고리를 클릭하면 관련 서비스가 나열됩니다. 강의를 진행하면서 서비스들을 차차 배울 테니 일일이 들어가 보지는 않을게요. 
 
@@ -252,17 +252,17 @@ Route 53 서비스를 눌러 콘솔을 살펴볼까요. 오른쪽 상단에 Glob
 
 안녕하세요, 제 영상과 AWS 화면 간 발생할 수 있는 UI의 차이에 대해 말씀드리겠습니다. 먼저 설명을 드리자면, AWS는 새로운 디자인 지침에 맞춰 대대적인 인터페이스 변경 중에 있습니다. 따라서 새로운 UI가 표시될 수 있습니다. 
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%207.png)
+![Untitled](AWS_Practitioner/Untitled%207.png)
 
 이게 새로운 형태의 UI죠. 사각형 모양으로 되어 있습니다. 
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%208.png)
+![Untitled](AWS_Practitioner/Untitled%208.png)
 
 그러나 오래된 UI가 보일 때도 있을 겁니다. 이런 형식이죠. AWS가 모든 서비스에 대한 UI 인터페이스를 변경 중에 있지만, 모든 변경이 동시에 진행되고 있지는 않습니다. 1, 2년에 걸쳐 진행될 것이고, 지금 이 순간에도 진행 중이죠. 물론 제 목표는 영상을 가급적 최신으로 유지하는 것이지만, AWS 측이 변경 작업을 마무리하기 전에는 모든 변경을 전부 반영하는 것이 불가능합니다. 따라서 급격한 변화에 대해서는 강의 영상들을 최대한 최신으로 유지하기 위해 노력 중이지만, 여러분이 콘솔을 사용하시는 데에 지장을 주지 않을 정도의 작은 변화는 영상에 업데이트 해서 반영하진 않고 있습니다. 하지만 저는 피드백을 귀담아 듣는 사람이고, 영상에 업데이트가 필요한 경우에는 바로 업데이트를 할 테니 걱정 마세요.
 
 또 하나 말씀드리자면, 이런 차이에 심각하게 혼란을 느끼고 계신 경우 새 UI가 반영된 대부분의 서비스에서 이 스위치를 끔으로써 기존의 UI로 돌아갈 수 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%209.png)
+![Untitled](AWS_Practitioner/Untitled%209.png)
 
 보시다시피 스위치를 꺼 기존 UI로 돌아가시면 가끔 제 영상에서와 같은 예전 UI를 보실 수 있습니다. 다만, 혹시 몰라서 미리 말씀드리는 것이지 제 강의가 뒤쳐져 있는 건 전혀 아닙니다. 여러분이 시험에 합격하고 이 강의를 통해 많은 것을 배우실 수 있도록 돕는 게 제 열정이자 의무죠. 저를 믿으셔도 좋습니다. 강의에 영향을 미칠 만큼 큰 변화가 있는지의 여부를 매일 확인하고 있으며, 강의에 중요한 변경 사항은 반드시 업데이트할 것을 약속드릴 테니 강의 상의 화면이 AWS 상의 변경을 즉각적으로 반영하지 못 한 경우가 있다 해도, 이해 부탁드립니다. 현 상황에서 모든 변화를 따라가기는 굉장히 어렵습니다. 감사합니다, 즐거운 시간이 되길 바랍니다.
 
@@ -272,7 +272,7 @@ Route 53 서비스를 눌러 콘솔을 살펴볼까요. 오른쪽 상단에 Glob
 
 강의를 시작하기 전에 한가지 정리하겠습니다. 공동 책임 모델에 대해 많은 언급이 있을 것입니다. 또한, 강의의 마지막에는 이 도표를 살펴보겠습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2010.png)
+![Untitled](AWS_Practitioner/Untitled%2010.png)
 
 클라우드를 사용할 때는 여러분의 책임과 AWS의 책임이 있습니다. 여러분은 고객으로서 클라우드 내 보안에 대한 책임이 있습니다. 클라우드에서 사용하고 구성하는 모든 것은 여러분의 책임입니다. 이에는 보안, 데이터, 운영체제, 네트워크, 방화벽 구성 등이 포함됩니다. 반면에, AWS는 클라우드에 관한 보안 책임이 있습니다. 이는 모든 인프라, 하드웨어, 소프트웨어, 자체 내부 보안을 포함합니다. 따라서 공동 책임이 발생합니다. Certified Cloud Practitioner 시험에서는 여러분의 책임과 AWS의 책임을 식별하는 문제가 출제됩니다.
 
@@ -288,13 +288,13 @@ Route 53 서비스를 눌러 콘솔을 살펴볼까요. 오른쪽 상단에 Glob
 
 # 14. IAM 소개: 사용자, 그룹, 정책
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2011.png)
+![Untitled](AWS_Practitioner/Untitled%2011.png)
 
 AWS 서비스를 본격적으로 다룰 첫 강의에 오신 것을 환영합니다. 첫 번째로 IAM입니다. IAM은 Identity and Access Management의 약자로, 사용자를 생성하고 그룹에 배치함으로써 글로벌 서비스에 해당합니다. 이미 우리는 IAM을 사용해왔습니다. 계정을 생성할 때 기본적으로 루트 계정이 생성됩니다. 이는 기본 생성 요소로서, 계정의 루트 사용자가 됩니다. 그러나 이는 계정을 생성할 때만 사용해야 합니다. 그 후에는 더 이상 사용하거나 공유해서는 안 됩니다. 대신에 사용자를 생성해야 합니다.
 
 IAM에서 사용자를 생성할 때, 각 사용자는 조직 내 한 사람에 해당합니다. 필요한 경우 사용자들을 그룹으로 묶을 수도 있습니다. 예를 들어, 여섯 명으로 이루어진 조직이 있다고 합시다. Alice, Bob, Charles, David, Edward, Fred가 있으며, 이들 모두가 여러분의 조직에 속해 있습니다. Alice, Bob, Charles는 함께 일하고 있으며, 따라서 Developers라는 그룹을 생성하여 그들을 배치합니다. 또한 David과 Edward는 함께 일하기 때문에 Operations 그룹을 만들어 묶어 줍니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2012.png)
+![Untitled](AWS_Practitioner/Untitled%2012.png)
 
 이제 IAM에는 두 개의 그룹이 있네요. 그룹에는 사용자만 배치할 수 있습니다 다른 그룹을 포함시킬 순 없죠. 이 부분을 이해하는 것이 중요합니다. 그룹에는 오직 사용자만 배치할 수 있습니다. 그룹에 포함되지 않은 사용자도 있을 수 있죠. 예를 들어 여기에는 Fred가 혼자 있으며 어느 그룹에도 속하지 않습니다. 이런 방식은 권장되지 않지만, AWS에서는 가능합니다. 또한 한 사용자가 다수의 그룹에 속할 수도 있는데요. 예를 들어 Charles와 David가 감사 팀에서 함께 일한다고 해봅시다. 그럼 Charles와 David이 속한 세 번째 그룹을 만들 수 있으며. 예시를 보시면 Charles와 David이 각각 두 개의 서로 다른 그룹에 속한 것을 볼 수 있습니다. IAM에서 사용 가능한 구성이죠.
 
@@ -302,7 +302,7 @@ IAM에서 사용자를 생성할 때, 각 사용자는 조직 내 한 사람에 
 
 그리고 허용을 위해서는 이들에게 권한을 부여해야 합니다. 이를 위해 사용자 또는 그룹에게 정책, 또는 IAM 정책이라고 불리는 JSON 문서를 지정할 수 있습니다. 그 의미에 대해서는 곧 설명드리죠. 문서는 이런 형태죠 프로그래밍이 아니기 때문에 프로그래머가 아니셔도 이해가 가능합니다 알기 쉬운 영어로 특정 사용자, 혹은 특정 그룹에 속한 모든 사용자들이 어떤 작업에 권한을 가지고 있는지를 설명해 놓은 겁니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2013.png)
+![Untitled](AWS_Practitioner/Untitled%2013.png)
 
  예시를 보시면, 사람들에게 EC2 사용 및 Describe이 허용된 상태이며 일래스틱 로드 밸런싱 서비스와 Describe, 그리고 CloudWatch의 사용도 허용이 되어 있죠. EC2, Elastic Load Balancing, 그리고 CloudWatch는 이후에 배울 내용이지만 이와 같은 형태의 JSON 문서를 통해 사용자들이 AWS 서비스를 이용하도록 허용하는 것이죠. 이 정책들을 사용해 사용자들의 권한을 정의할 수 있게 됩니다. AWS에서는 모든 사용자에게 모든 것을 허용하지 않습니다. 그러면 엉망이 될 겁니다. 새로운 사용자가 너무 많은 서비스를 실행하여 큰 비용이 발생하거나, 보안 문제를 야기할 수 있기 때문이죠. 따라서 AWS에서는 최소 권한의 원칙을 적용합니다. 즉 사용자가 꼭 필요로 하는 것 이상의 권한을 주지 않는 것입니다. 사용자가 세 개의 서비스에 접근해야 한다면 그에 대한 권한만 생성하는 것이죠. 그럼 이렇게 IAM의 개관을 살펴봤으니 다음 강의에서는 사용자와 그룹 생성을 연습해 보겠습니다.
 
@@ -312,81 +312,81 @@ IAM에서 사용자를 생성할 때, 각 사용자는 조직 내 한 사람에 
 
 이제 IAM 서비스를 사용하여 AWS에서 사용자를 생성하는 연습을 해봅시다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2014.png)
+![Untitled](AWS_Practitioner/Untitled%2014.png)
 
 검색창에서 IAM을 누르고 IAM 콘솔로 들어갑니다. IAM 대시보드에 들어오면 위에 보안 권장 사항이 뜨는데, 지금은 일단 신경 쓰지 않고 넘어가겠습니다. 그리고 왼쪽에 있는 Users를 클릭하시면 됩니다. 여기서 IAM 사용자를 생성하게 되는데, 한 가지 먼저 확인할 것이 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2015.png)
+![Untitled](AWS_Practitioner/Untitled%2015.png)
 
  오른쪽 상단 구석으로 가서 Global을 클릭하면, 리전 선택이 활성화되지 않았다는 것을 볼 수 있습니다. 즉, IAM은 전체 서비스로서 글로벌 서비스이며, 따라서 선택할 리전이 없다는 뜻입니다. IAM에서 사용자를 생성하면 어디에서나 사용할 수 있습니다. 하지만 이 강의에서 볼 다른 콘솔들 중 특정 지역에서만 사용가능한 것도 있습니다. 알아두면 좋습니다.
 
 이제 Users 창을 봅시다. 우리가 사용자를 생성하는 이유는 무엇일까요? 우리가 지금 사용하고 있는 건 루트 사용자라는 것이기 때문입니다. 
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2016.png)
+![Untitled](AWS_Practitioner/Untitled%2016.png)
 
 여기를 클릭하면 여러분만 사용 가능한 계정 ID가 보입니다. 이게 나온다면, 루트 계정을 사용하고 있다는 뜻입니다. 루트 계정을 사용하는 것은 최선의 방법이 아닙니다. 그래서 우리는 계정을 더 안전하게 사용할 수 있도록 관리자 사용자와 같은 사용자를 생성하려고 합니다. 이제 사용자를 생성해봅시다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2017.png)
+![Untitled](AWS_Practitioner/Untitled%2017.png)
 
 예시로, 사용자 이름은 Stephane이라고 입력하겠습니다. 당연히 저는 관리 콘솔에 제가 접근할 수 있게 하고 싶습니다. 이것을 하기 위해서는 identity center를 사용하는 것이 추천하는 방법이고 IAM 사용자를 생성하는 방법도 있습니다. 저는 더 간단한 방법인 후자를 선택할 것입니다. 그리고 시험 관점에서도 이 방법을 알아둬야 합니다. 이 선택이 이 강의 과정의 방향에 영향을 미치지는 않을 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2018.png)
+![Untitled](AWS_Practitioner/Untitled%2018.png)
 
 그럼 IAM 사용자를 생성하고 이제 비밀번호를 설정해야 합니다. 만약 이 사용자가 제가 아니었다면, 비밀번호를 자동생성으로 두고 이것도 체크 상태로 두어 사용자가 다음 로그인 시 비밀번호를 변경하도록 하겠지만 하지만 이것은 저이기 때문에 저는 그냥 사용자 정의 비밀번호를 입력할 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2019.png)
+![Untitled](AWS_Practitioner/Untitled%2019.png)
 
 그리고 다음 로그인 때 비밀번호를 변경할 필요가 없기에 이것도 선택 해제할 것입니다. Next를 클릭하고, 이제 사용자에게 권한을 추가해야 합니다. 직접 추가할 수도 있고 그룹으로 시작할 수도 있는데, 한 번 그룹을 생성해봅시다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2020.png)
+![Untitled](AWS_Practitioner/Untitled%2020.png)
 
 그룹을 생성할 것인데, 그룹 이름은 admin이 될 것입니다. 그리고 정책 이름은 Administrator Access가 될 것입니다. 이제 만들어졌으니, 사용자를 admin 그룹에 추가할 수 있습니다. Next를 클릭하면 지금까지 설정한 것을 검토할 수 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2021.png)
+![Untitled](AWS_Practitioner/Untitled%2021.png)
 
 여기 사용자 이름, 그룹의 권한, 그리고 태그가 있습니다. 태그는 AWS에서 어디에나 있으며, 선택 사항이지만 여러분의 리소스에 메타데이터를 제공할 수 있게 해줍니다. 예를 들어, 저는 Stephane의 부서가 기술부라고 입력할 수 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2022.png)
+![Untitled](AWS_Practitioner/Untitled%2022.png)
 
 이것은 제가 모든 강의 때마다 하진 않겠지만 AWS에서 리소스에 태그를 추가하는 방법을 한 번 보여드리겠습니다. 사용자가 성공적으로 생성되었습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2023.png)
+![Untitled](AWS_Practitioner/Untitled%2023.png)
 
 이제 로그인 방법 설명을 이메일로 받거나 CSV 파일로 다운로드할 수 있습니다. 그리고 나서 이 사용자로 로그인할 수 있습니다. 하지만 먼저 사용자 목록으로 돌아가서 모든 것을 살펴봅시다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2024.png)
+![Untitled](AWS_Practitioner/Untitled%2024.png)
 
 이게 사용자 목록인데, 여기에 제 계정이 보이고, 또 그룹도 볼 수 있어서 왼쪽으로 가서 User groups를 클릭하면, admin 그룹이 보입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2025.png)
+![Untitled](AWS_Practitioner/Untitled%2025.png)
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2026.png)
+![Untitled](AWS_Practitioner/Untitled%2026.png)
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2027.png)
+![Untitled](AWS_Practitioner/Untitled%2027.png)
 
 admin 그룹을 살펴보면, Stephane이라는 사용자 한 명이 속해있는 걸 볼 수 있습니다. 그리고 그룹의 권한을 살펴보면 admin 그룹에 관리자 액세스가 첨부되어 있다는 것을 볼 수 있습니다. 이제 여기에서 제 사용자인 Stephane에 들어가면 권한 정책에도 마찬가지로 관리자 액세스가 있다는 것을 볼 수 있습니다. 하지만 이것은 직접 첨부된 것이 아니고 admin 그룹을 통해 첨부된 것입니다. 이는 곧 자신이 속한 admin 그룹이 가진 모든 권한을 Stephane이 이어받는다는 의미입니다. 이것이 우리가 사용자를 그룹에 넣는 이유입니다. 이런 식으로 권한을 관리하는 것이 좀 더 간단하기 때문입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2028.png)
+![Untitled](AWS_Practitioner/Untitled%2028.png)
 
 다시 대시보드로 돌아가서, 이제 Stephane으로 사용자 로그인하고자 합니다. 일단 우리가 할 수 있는 것은 AWS 계정을 살펴보는 것입니다. 보면 계정 ID와 로그인 URL이 있습니다. 이 로그인 URL은 매우 쉽게 변경할 수 있습니다. 계정 별칭이라고 하는 것을 만들어서 말입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2029.png)
+![Untitled](AWS_Practitioner/Untitled%2029.png)
 
 예를 들어, 별칭을 aws-stephane-v3로 적고, 별칭 생성을 누릅니다. 그래서 아직 아무도 생성하지 않은 별칭을 아무렇게나 정하면 됩니다. 별칭은 고유해야 하고, 지금 보니 V5는 가능합니다. 이제 이 별칭을 사용하여 로그인 URL을 간소화할 수 있습니다. 이제 제 Stephane 계정을 사용하여 로그인하려면, 같은 브라우저를 사용할 수도 있고 또는 비공개 모드로 새 브라우저 창을 만들 수 있습니다. 이렇게 하면 AWS를 사용하여 두 창을 나란히 둘 수 있는 장점이 있습니다. 이렇게 하지 않아도 상관은 없습니다. 오른쪽 창에서 Stephane 계정을 사용하여 로그인하면 왼쪽 창에서 연결이 끊어집니다. 이것이 유일한 차이점입니다. 그래서 동시에 두 계정을 사용하려면 왼쪽에는 루트 계정, 오른쪽에는 자신의 계정으로 들어가 제가 쓰는 꼼수는 바로 웹 브라우저에서 비공개 모드를 사용하는 것입니다. hrome, Firefox, Safari 등등 모두 이 기능이 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2030.png)
+![Untitled](AWS_Practitioner/Untitled%2030.png)
 
 그래서 로그인 URL을 붙여넣으면, 보시다시피 IAM 사용자로 로그인하게 됩니다. 이 페이지에 도달하기 위해서는, 다시 돌아가서 AWS에 로그인 할 때 보시다시피 루트 사용자 로그인과 IAM 사용자 로그인이 따로 있습니다. 아까 화면으로 돌아가려면 IAM 사용자 로그인을 누르고 계정 ID 또는 여기로 복사할 수 있는 계정 별칭을 입력합니다. 그러면 이 페이지로 이동하게 됩니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2031.png)
+![Untitled](AWS_Practitioner/Untitled%2031.png)
 
 IAM 사용자 이름은 Stephane이 될 것입니다. 그리고 비밀번호는 이전에 설정한 것이 될 것입니다. 이제 로그인합니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2032.png)
+![Untitled](AWS_Practitioner/Untitled%2032.png)
 
 멋진 점은, 오른쪽 상단을 보면 제가 IAM 사용자로 로그인했다는 것입니다. 그래서 계정 ID가 나오고, 밑에 IAM 사용자라고 표시됩니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2033.png)
+![Untitled](AWS_Practitioner/Untitled%2033.png)
 
 하지만 왼쪽 창에서 오른쪽 상단을 보면 계정 ID만 표시되어 있어 루트 계정임을 알 수 있습니다. 이제 다 됐습니다. 우리는 왼쪽의 일반 창을 통해 루트 계정으로 로그인했고 우리는 오른쪽의 비공개 모드 창을 통해 IAM 사용자로 로그인했습니다. 루트 계정 로그인과 관리자 로그인을 잃어버리지 않도록 주의해 주세요. 그렇지 않으면 계정에 큰 문제가 생길 수 있습니다. 그리고 AWS 서비스에 연락해야 할 것입니다. 안타깝게도 그 문제에 대해 저는 도와드릴 수 없습니다.
 
@@ -404,7 +404,7 @@ IAM 사용자 이름은 Stephane이 될 것입니다. 그리고 비밀번호는 
 
 직접 실습을 해보면 더 와닿으실 겁니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2034.png)
+![Untitled](AWS_Practitioner/Untitled%2034.png)
 
 정책의 구조를 살펴보면 정책 구조와 정책 명명법에 대해서 잘 이해를 해두셔야 하는데요. AWS에서 자주 보게 되실 형식이니, 이 구조에 익숙해지셔야 합니다. 좌측에 있는 건 JSON 문서죠. IAM 정책 구조 요소는 버전 숫자를 포함하는데요. 보통은 2012-10-17로 정책 언어 버전입니다. 정책을 식별하는 ID도 있는데 선택 사항이고요.
 
@@ -424,23 +424,23 @@ IAM 사용자 이름은 Stephane이 될 것입니다. 그리고 비밀번호는 
 
 이제 IAM 정책에 대해 더 깊게 살펴봅시다. 우선, Users를 클릭하고 보시다시피 사용자 Stephane은 admin 그룹에 속해 있고, 그러므로 AWS에 대해 AdministratorAccess 권한을 가집니다. 제 사용자 Stephane으로 IAM 콘솔에 들어가게 되면 지금 제 사용자로 들어가고 있습니다. 여기서도 왼쪽의 Users를 클릭하면 보시다시피 Stephane 계정이 바로 여기 있습니다. 제 사용자인 Stephane은 어떤 것이든 할 수 있는 권한이 있습니다. 지금 관리자이기 때문입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2035.png)
+![Untitled](AWS_Practitioner/Untitled%2035.png)
 
 제가 이제 할 것은, admin 그룹에 들어가 Stephane을 그룹에서 삭제할 것입니다. 제가 방금 한 것처럼, 사용자를 삭제함으로써 Stephane은 오른쪽 창에서 권한을 잃게 됩니다. 확인하는 방법을 알아보겠습니다. 우선 페이지를 새로고침하고, 여기 보이는 것처럼 이제 Users에 항목이 없고, 액세스가 거절됐습니다. 저에게 IAM:ListUsers에 권한이 없다고 뜹니다. 제가 admin 그룹에서 Stephane을 삭제했기 때문에 오른쪽 창에서 사용자를 보기 위한 권한을 잃은 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2036.png)
+![Untitled](AWS_Practitioner/Untitled%2036.png)
 
 이젠 문제를 해결해봅시다. IAM에 들어가 Users를 누르고 Stephane을 찾습니다. 지금 여기 보이듯이 Stephane은 권한 정책이 0개입니다. 그러면 권한을 추가해봅시다. 권한을 직접적으로 추가할 수도 있고, 인라인 정책을 생성할 수도 있습니다. 조금 더 쉬운 방법인, 권한 추가를 해봅시다. 다시 사용자를 그룹에 추가할 수도 있는데, 이는 우리가 지금 하려는 것이 아니기에, 직접적으로 내 사용자에 정책을 첨부하는 방법이 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2037.png)
+![Untitled](AWS_Practitioner/Untitled%2037.png)
 
 제가 첨부할 정책은 IAM ReadOnlyAccess입니다. 이는 제 사용자 Stephane이 IAM에 있는 어떤 것이든 읽을 수 있게 해줄 것입니다. 이 권한을 추가하면, 이제 이 정책이 첨부되었습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2038.png)
+![Untitled](AWS_Practitioner/Untitled%2038.png)
 
 다시 오른쪽 창에서, 새로고침을 하면, 보시다시피 이제 다시 API 호출을 할 수 있게 되었고, 제 사용자 목록에서 Stephane을 볼 수 있습니다. 사용자와 admin 같은 사용자 그룹을 볼 수 있지만, 그룹을 생성할 순 있을까요?
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2039.png)
+![Untitled](AWS_Practitioner/Untitled%2039.png)
 
 개발자 그룹을 생성해봅시다. Create group을 누르면, 보시다시피 생성할 수 없다고 나옵니다. 제게 그룹을 생성할 권한은 없기 때문입니다. 지금 저는 IAM에서 읽기 전용 액세스만 받은 상태입니다. 그렇기 때문에, 저는 그룹을 생성할 수는 없습니다. 이것으로 사용자들에게 그들이 할 일에 대해서만 권한을 줄 수 있다는 걸 알 수 있습니다. 물론 제가 오른쪽 창에서 그룹을 생성할 권한을 주려 한다면, IAM 전체 액세스처럼 더 큰 권한 세트를 첨부해야 합니다.
 
@@ -448,7 +448,7 @@ IAM 사용자 이름은 Stephane이 될 것입니다. 그리고 비밀번호는 
 
 이제 그룹이 추가가 됐습니다. 마지막으로, admin 그룹에 들어가서, 다시 사용자를 추가할 것인데, Stephane을 다시 이 그룹으로 추가합니다. 이제 Stephane 사용자를 보기 위해 IAM으로 돌아가 Users의 Stephane을 누르면, 오른쪽의 창은 잠깐 정리를 하고, 사용자로서의 Stephane을 살펴보면 세 가지의 권한정책이 사용자에게 첨부돼있음을 볼 수 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2040.png)
+![Untitled](AWS_Practitioner/Untitled%2040.png)
 
 admin 그룹으로부터 받은 AdministratorAccess가 있고, developers 그룹으로 받은 AlexaForBusiness 정책도 있습니다. 마지막으로, 직접적으로 첨부된 IAMReadOnlyAccess가 있습니다.
 
@@ -458,27 +458,27 @@ admin 그룹으로부터 받은 AdministratorAccess가 있고, developers 그룹
 
 첫 번째로, AdministratorAccess 정책을 봅시다. 여길 보면, 우리에게 모든 것에 대한 관리자 액세스를 준 권한입니다. 이 정책에 정의된 권한을 요약해서 보면, AWS의 모든 서비스를 허용함을 볼 수 있습니다. 시간이 지나면서 이 숫자는 바뀔 수 있지만, 중요하진 않습니다. 어차피 이 강좌는 최신판일 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2041.png)
+![Untitled](AWS_Practitioner/Untitled%2041.png)
 
 이 모든 서비스들, 예를 들어 App Mesh, Alexa for business나 Amplify에 전체 액세스를 가집니다. 어떻게 이 권한이 정의됐는지 확인해봅시다. JSON을 클릭하면, 이것은 이 정책의 JSON 형태인데 여기에 "Allow", "Action": "*", "Resource": "*"이라고 적힌 걸 볼 수 있습니다. AWS에서 "*"은 "anything(아무 것)"을 의미하고, 이는 곧 어느 리소스에서 어느 액션이든지 허용한다는 뜻입니다. 그렇다는 건 결국 관리자 액세스를 받는 것과 정확히 같다는 것입니다. 이런 방식으로 정의된 것입니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2042.png)
+![Untitled](AWS_Practitioner/Untitled%2042.png)
 
 다른 정책을 한 번 살펴보자면, 이전에 봤던 IAMReadOnlyAccess의 경우 한 번 보자면, 이것은 IAM이 "Full: List"와 "Limited: Read"로 권한을 부여받은 것을 볼 수 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2043.png)
+![Untitled](AWS_Practitioner/Untitled%2043.png)
 
 이걸 클릭하면, 이 정책의 일부로써 허용된 모든 API 호출을 확인할 수 있습니다. 상당히 유용한 기능입니다. 반면에 이 정책이 어떤 방식으로 정의됐는지 보기 위해 JSON을 클릭하면, JSON 문서가 떠서 어떤 식으로 정의됐는지 볼 수 있습니다. "Effect"는 "Allow"이고, 허용되는 API 호출의 목록이 보이는데, 그래서 여러가지가 있, "Get *"이 있습니다. "Get *"이 있다는 것은 "Get"으로 시작하는 어떤 것이든 허용된다는 뜻입니다. "GetUsers" 혹은 "GetGroups"가 예시입니다. "List"의 경우에도 똑같습니다. "List **"이 있기에 "ListUsers" 혹은 "ListGroups"가 허용되는 것입니다. * 문자를 이용함으로써 많은 API 호출을 포함하고 분류하게 됩니다. 이 모든 것들이 "Resource" : "*”*에서 허용됩니다. 이로써 IAM ReadOnlyAccess가 어떻게 구성돼있는지 살펴보았습니다. 상당히 유용합니다. 또한 여러분이 자신의 정책을 새로 만들 수도 있습니다.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2044.png)
+![Untitled](AWS_Practitioner/Untitled%2044.png)
 
 정책을 한 번 생성해봅시다. Visual 편집기나 JSON 편집기를 사용합니다. 여러분이 만약 JSON이 있다면, 간단하게 이 부분을 수정해서 이 기능을 활용해 JSON 문서를 만들면 됩니다. 간단한 작업입니다. 
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2045.png)
+![Untitled](AWS_Practitioner/Untitled%2045.png)
 
 아니면 Visual 편집기를 이용해서, 예시로, IAM을 입력하고 IAM을 위한 것을 만들기 위해 어떤 액션에 대한 권한을 받고 싶은지 생각해봅시다. ListUsers의 권한을 받고 싶기 때문에 눌러서 체크 표시하고 또 GetUser을 입력합니다. 두 가지 API 호출만 나옵니다. 여기 보이다시피 저희가 List에서는 38개 중 1개를 선택했고, Read에서는 32개 중 1개입니다. 이제 어느 곳에서 이 권한을 부여받을지 정해야 합니다. 모든 리소스, 혹은 특정 리소스 중 선택해야 합니다. 둘 중 하나이니 매우 간단하게 정책을 생성할 수 있습니다. Next를 누르면 MyIAMPermissions로 이름을 짓고, 정책 생성을 누르면 됩니다. 
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2046.png)
+![Untitled](AWS_Practitioner/Untitled%2046.png)
 
 제가 만든 정책을 한 번 살펴보면, 상응하는 JSON을 확인할 수 있고, VisualEditor을 통해 "Resource": "*"에서 IAM ListUsers와 GetUsers를 허용한 것을 볼 수 있습니다. 그리고 이 정책을 그룹이나 사용자에게 첨부할 수 있습니다. 이렇게 AWS에서 권한을 관리할 수 있습니다.
 
@@ -498,11 +498,11 @@ admin 그룹으로부터 받은 AdministratorAccess가 있고, developers 그룹
 
 Alice를 예로 들어봅시다. Alice는 자신의 비밀번호를 알고 있으며 MFA 생성 토큰도 가지고 있죠. 로그인 과정에서 이 둘을 함께 사용함으로써 Alice는 MFA에 성공적으로 로그인할 수 있습니다. MFA의 장점은 Alice가 해킹을 당해 비밀번호가 누출된 상황이라고 해도 해커에게는 로그인을 위해 휴대전화 등 Alice 소유의 물리적 장치가 추가로 필요해질 테니 계정이 침해당하지 않는다는 점입니다. 계정에 침투를 할 가능성이 훨씬 더 적겠죠.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2047.png)
+![Untitled](AWS_Practitioner/Untitled%2047.png)
 
 AWS에서의 MFA 장치 옵션으로는 어떤 것들이 있을까요? 시험에 출제되는 내용이긴 합니다만 간단하니까 걱정은 안 하셔도 됩니다. 먼저 가상 MFA 장치인데요, 강의의 실습에서 다루게 될 장치죠. Google Authenticator를 사용할 수 있는데 하나의 휴대전화에서만 사용이 가능하죠. Authy는 여러 장치에서 사용이 가능합니다. 장치의 개수가 다를 뿐 작동 방식은 동일합니다. 개인적으로 저는 Authy를 사용하는데 컴퓨터와 휴대전화에서 같이 사용할 수 있기 때문이죠. Authy는 하나의 장치에서도 토큰을 여러 개 지원합니다. 즉, 가상 MFA 장치를 사용하면 루트 계정, IAM 사용자 또 다른 계정, 그리고 또 다른 IAM 사용자가 지원되는 식으로 가상 MFA 장치에 원하는 수만큼의 계정 및 사용자 등록이 가능합니다. 그래서 사용하기가 아주 편리하죠.
 
-![Untitled](AWS%20Certified%20Cloud%20Practitioner%200e7c045c20fa47d393f05712b226f1eb/Untitled%2048.png)
+![Untitled](AWS_Practitioner/Untitled%2048.png)
 
 범용 두 번째 인자, 혹은 U2F 보안 키라고 불리는 것도 있습니다. 이는 물리적 장치로 예를 들어 Yubico 사의 YubiKey가 있죠. Yubico는 AWS의 제3자 회사로 AWS 제공 장치가 아니라 제3자 회사의 장치입니다. 이렇게 물리적 장치를 사용하면 전자 열쇠에 달고 다닐 수 있으니 사용이 상당히 편리할 수 있겠죠. YubiKey는 하나의 보안 키에서 여러 루트 계정과 IAM 사용자를 지원하기 때문에 하나의 키로도 충분합니다. 그렇지 않다면 엄청나게 번거로울 겁니다.
 
