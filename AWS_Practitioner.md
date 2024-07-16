@@ -1,12 +1,6 @@
-# AWS Certified Cloud Practitioner
+# AWS Certified Cloud
 
 
-
-시험의 예시 문제
-
-[https://explore.skillbuilder.aws/learn/course/external/view/elearning/14050/aws-certified-cloud-practitioner-official-practice-question-set-clf-c02-english](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14050/aws-certified-cloud-practitioner-official-practice-question-set-clf-c02-english)
-
----
 
 
 AWS Free Tier 에 관한 정보는
