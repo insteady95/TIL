@@ -2,7 +2,7 @@
 
 ## 요약 정리
 
-[[1. SQL 처리 과정과 I/O](https://github.com/insteady95/TIL/blob/main/Kind_SQL/1.SQL%20%EC%B2%98%EB%A6%AC%20%EA%B3%BC%EC%A0%95%EA%B3%BC%20IO.md)
+[1. SQL 처리 과정과 I/O](https://github.com/insteady95/TIL/blob/main/Kind_SQL/1.SQL%20%EC%B2%98%EB%A6%AC%20%EA%B3%BC%EC%A0%95%EA%B3%BC%20IO.md)
 
 [1.1 SQL 파싱과 최적화](https://github.com/insteady95/TIL/blob/main/Kind_SQL/1.1.SQL%20%ED%8C%8C%EC%8B%B1%EA%B3%BC%20%EC%B5%9C%EC%A0%81%ED%99%94%20.md)
 
